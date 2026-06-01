@@ -1,0 +1,91 @@
+.transactions-section {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.transactions-section h2 {
+  color: var(--primary-dark);
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.transactions-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  background: #F9F9F9;
+  transition: background 0.3s ease;
+}
+
+.transaction-item:hover {
+  background: var(--accent);
+}
+
+.transaction-info {
+  flex: 1;
+}
+
+.transaction-description {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.recurring-badge {
+  font-size: 0.9rem;
+}
+
+.transaction-meta {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.transaction-amount {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-right: 15px;
+}
+
+.transaction-amount.income {
+  color: var(--income);
+}
+
+.transaction-amount.expense {
+  color: var(--expense);
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+  color: #FF6B6B;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-light);
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}

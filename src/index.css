@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #FFB6C1;
+  --primary-dark: #FF91A4;
+  --secondary: #B5EAD7;
+  --accent: #FFDAC1;
+  --background: #FFF0F5;
+  --card-bg: #FFFFFF;
+  --text: #5A5A5A;
+  --text-light: #8A8A8A;
+  --income: #98D8AA;
+  --expense: #FFB3B3;
+  --balance: #C9B1FF;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, var(--background) 0%, #F0F8FF 100%);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
