@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import SummaryCards from './components/SummaryCards'
-import TransactionForm from './components/TransactionForm'
 import Calendar from './components/Calendar'
 import TransactionsList from './components/TransactionsList'
 import MonthlyProjection from './components/MonthlyProjection'
@@ -123,19 +122,25 @@ function App() {
       {/* Vista Transacciones Recurrentes */}
       {activeView === 'recurring' && (
         <section className="section-info">
-          <RecurringTransactions transactions={transactions} onDeleteTransaction={deleteTransaction} />
+          <RecurringTransactions 
+            transactions={transactions} 
+            onDeleteTransaction={deleteTransaction}
+            onAddTransaction={addTransaction}
+          />
         </section>
       )}
 
       {/* Vista Registrar Transacción */}
       {activeView === 'register' && (
         <section className="section-form">
-          <h2 className="section-title">📝 Registrar Nueva Transacción</h2>
-          <TransactionForm onAddTransaction={addTransaction} />
+          <h2 className="section-title">📝 Selecciona un día para registrar</h2>
+          <div className="calendar-container-section">
+            <Calendar transactions={transactions} onDayClick={handleDayClick} />
+          </div>
         </section>
       )}
 
-      {/* Modal para registrar desde calendario */}
+      {/* Modal para registrar transacción */}
       <TransactionModal 
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
